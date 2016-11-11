@@ -20,9 +20,11 @@ function enter(e){
 }
 
   function runfetch(){
+    var message = inputField.value
+    inputField.value = ''
     fetch('/chats', {
       body: JSON.stringify({
-        message: inputField.value
+        message: message
       }),
       method: 'POST',
       headers: {
@@ -39,5 +41,4 @@ function enter(e){
     othersMessage.classList.add("list-group-item")
     othersMessage.innerHTML = chat.message
     messages.insertBefore(othersMessage, messages.childNodes[0])
-    inputField.value = ''
   }
