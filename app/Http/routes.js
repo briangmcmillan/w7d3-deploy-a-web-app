@@ -15,12 +15,10 @@
 | Route.resource('user', 'UserController')
 */
 
+// const Route = use('Route')
+// Route.resource('/blog', 'BlogController')
+// Route.on('/').render('welcome')
+
 const Route = use('Route')
-
-Route.resource('/blog', 'BlogController')
-
-
-
-
-
+Route.resource('/chats', 'ChatsController')
 Route.on('/').render('welcome')
